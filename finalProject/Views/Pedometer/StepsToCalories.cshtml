@@ -1,0 +1,23 @@
+﻿@model double
+@{
+    ViewData["Title"] = "Calorie Result";
+}
+
+<div class="container w-50">
+    <h1 class="mb-5">Calorie Calculator</h1>
+
+    <div class="mt-3 mb-3">
+    @if (ViewBag.number == "Not Valid")
+    {
+        <p>Enter A Valid Number Greater Than Zero</p>
+    }
+    else
+    {
+        <p>Calories Burned:</p>
+        <h2>@Model</h2>
+            
+    }
+    </div>
+
+    <a asp-controller="Pedometer" asp-action="Steps" class="btn btn-secondary btn-sm">Perviuos Page</a>
+</div>

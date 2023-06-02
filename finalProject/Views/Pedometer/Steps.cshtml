@@ -1,0 +1,16 @@
+﻿@model StepInfo
+@{
+    ViewData["Title"] = "Calorie Calculator";
+}
+
+<div class="container w-50">
+    <h1 class="mb-5">Calorie Calculator</h1>
+
+    <form method="post" asp-controller="Pedometer" asp-action="StepsToCalories">
+        <div class="form-group mb-3">
+            <label>Steps Taken:</label>
+            <input type="number" class="form-control" name="number">
+        </div>
+        <button type="submit" class="btn btn-primary">Calculate Calories Burned</button>
+    </form>
+</div>
